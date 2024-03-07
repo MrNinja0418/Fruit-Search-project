@@ -1,0 +1,80 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(178, 255, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(178, 255, 255, 1) 0%,
+    rgba(213, 152, 255, 1) 0%,
+    rgba(255, 195, 0, 1) 100%
+  );
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+input {
+  font-size: 16px;
+  font-weight: bolder;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  width: 100%;
+  border: 2px solid #ff59e9;
+}
+
+/* input:focus {
+  border: 2px solid #ff59e9;
+} */
+
+.search-container {
+  width: 300px;
+  margin: 50px auto;
+  position: relative;
+}
+.search-container input,
+.search-container .suggestions {
+  background: #ffc300;
+  border-radius: 5px;
+  color: rgb(49, 1, 31);
+}
+.search-container input {
+  padding-right: 30px;
+  background: rgb(178, 255, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(178, 255, 255, 1) 0%,
+    rgba(213, 152, 255, 1) 0%,
+    rgba(255, 195, 0, 1) 100%
+  );
+  border-radius: 5px;
+  color: rgb(49, 1, 31);
+}
+.search-container .suggestions {
+  position: absolute;
+  top: calc(100% + 5px); /* Position it below the input field */
+  left: 0;
+  width: calc(100% - 2px); /* Adjust width to match input */
+  max-height: 200px;
+  overflow-y: auto;
+  display: block;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.highlighted {
+  background-color: #ff7cf8; /* yellow background for highlighted suggestion */
+  font-weight: bold;
+}
